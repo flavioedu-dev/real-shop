@@ -1,0 +1,21 @@
+.item_cart {
+  font-size: 14px;
+  align-items: center;
+  gap: 10px;
+}
+
+.item_cart div {
+  flex-direction: column;
+}
+
+.item_cart div p{
+  font-weight: 600;
+}
+
+.item_cart > span{
+  font-weight: 500;
+}
+
+.item_cart > div > span{
+  color: rgb(0, 0, 0, .7);
+}
