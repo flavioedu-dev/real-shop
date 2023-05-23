@@ -43,18 +43,18 @@ const DataForm = () => {
   return (
         <form className={styles.data_container}>
           <div>
-          <PrimaryInput type="text" label="Primeiro nome" name={"fistName"} placeholder="Digite seu nome" value={firstName} onchange={handleChangeFirstName}></PrimaryInput>
-          <PrimaryInput type="text" label="Sobrenome" name={"lastName"} placeholder="Digite seu sobrenome" value={lastName} onchange={handleChangeLastName}></PrimaryInput>
+          <PrimaryInput type="text" label="Primeiro nome" name={"fistName"} placeholder="João" value={firstName} onchange={handleChangeFirstName}></PrimaryInput>
+          <PrimaryInput type="text" label="Sobrenome" name={"lastName"} placeholder="Pedro Silva" value={lastName} onchange={handleChangeLastName}></PrimaryInput>
           </div>
-          <PrimaryInput type="text" label="Endereço" name={"adress"} placeholder="Digite seu endereço" value={adress} onchange={handleChangeAdress}></PrimaryInput>
+          <PrimaryInput type="text" label="Endereço" name={"adress"} placeholder="Rua Pedro Freitas" value={adress} onchange={handleChangeAdress}></PrimaryInput>
           <div>
-          <PrimaryInput type="text" label="Cidade" name={"city"} placeholder="Digite a cidade" value={city} onchange={handleChangeCity}></PrimaryInput>
-          <PrimaryInput type="text" label="Estado" name={"state"} placeholder="Digite o estado" value={state} onchange={handleChangeState}></PrimaryInput>
-          <PrimaryInput type="number" label="Número" name={"postcode"} placeholder="Digite o número" value={postcode} onchange={handleChangePostcode}></PrimaryInput>
+          <PrimaryInput type="text" label="Cidade" name={"city"} placeholder="Picos" value={city} onchange={handleChangeCity}></PrimaryInput>
+          <PrimaryInput type="text" label="Estado" name={"state"} placeholder="Piauí" value={state} onchange={handleChangeState}></PrimaryInput>
+          <PrimaryInput type="number" label="Número" name={"postcode"} placeholder="5555" value={postcode} onchange={handleChangePostcode}></PrimaryInput>
           </div>
-          <PrimaryInput type="email" label="Email" name={"email"} placeholder="Digite seu email" value={email} onchange={handleChangeEmail}></PrimaryInput>
+          <PrimaryInput type="email" label="Email" name={"email"} placeholder="jão@gmail.com" value={email} onchange={handleChangeEmail}></PrimaryInput>
 
-          <button>Enviar</button>
+          <button>Continuar pagamento</button>
         </form>
   )
 }
