@@ -1,0 +1,13 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  padding: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.Header span {
+  font-weight: 500;
+  font-size: 1.2rem;
+}

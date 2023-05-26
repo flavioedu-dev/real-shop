@@ -1,8 +1,13 @@
-import "./Home.module.css"
+import styles from "./Home.module.css"
+
+// Components
+import Header from "../../components/Header/Header"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <main className={styles.Home}>
+      <Header></Header>
+    </main>
   )
 }
 
