@@ -1,11 +1,11 @@
-import "./App.css";
-import DataForm from "./components/DataForm/DataForm";
-import CartItems from "./components/CartItems/CartItems";
+import styles from "./Cart.module.css";
+import DataForm from "../../components/DataForm/DataForm";
+import CartItems from "../../components/CartItems/CartItems";
 import { Box } from "@chakra-ui/react";
 
-function App() {
+function Cart() {
   return (
-    <main className="App">
+    <main className={styles.Cart}>
       <Box bg="#fff" p="2rem" borderRadius="10px" maxW="40%" boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;">
         <DataForm />
       </Box>
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default Cart;
