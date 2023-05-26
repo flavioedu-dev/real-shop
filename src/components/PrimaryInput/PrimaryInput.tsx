@@ -5,7 +5,7 @@ import { Input } from "@chakra-ui/react"
 
 interface PrimaryInputProps {
   type: string;
-  label: string;
+  label?: string;
   name: string;
   placeholder: string;
   value: string;
