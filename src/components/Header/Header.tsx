@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header className={styles.Header}>
-      <span>ReactCart</span>
+      <span>Realshop</span>
       <PrimaryInput type="text" name="search-item" placeholder="Buscar produto..." onchange={handleSearch} value={searchItem} />
       <div></div>
     </header>

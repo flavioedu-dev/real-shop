@@ -16,8 +16,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <BrowserRouter>
         <Box minH="100vh" className="body-container">
           <Routes>
-            <Route path="/react-cart" element={<Home />} />
-            <Route path="/react-cart/cart" element={<Cart />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </Box>
       </BrowserRouter>
