@@ -1,5 +1,11 @@
 .Cart {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+}
+
+.Cart section{
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
 }

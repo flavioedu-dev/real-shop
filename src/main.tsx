@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider>
       <BrowserRouter>
-        <Box minH="100vh" minW="100vw" className="body-container">
+        <Box minH="100vh" className="body-container">
           <Routes>
             <Route path="/react-cart" element={<Home />} />
             <Route path="/react-cart/cart" element={<Cart />} />

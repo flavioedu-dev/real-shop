@@ -5,14 +5,16 @@ import { Box } from "@chakra-ui/react";
 
 function Cart() {
   return (
-    <main className={styles.Cart}>
-      <Box bg="#fff" p="2rem" borderRadius="10px" maxW="40%" boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-        <DataForm />
-      </Box>
-      <Box bg="#fff" p="2rem" borderRadius="10px" maxW="40%" boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;">
-        <CartItems />
-      </Box>
-    </main>
+    <Box minH="100vh" minW="100vw" className={styles.Cart}>
+      <section>
+        <Box bg="#fff" p="2rem" borderRadius="10px" maxW="40%" boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <DataForm />
+        </Box>
+        <Box bg="#fff" p="2rem" borderRadius="10px" maxW="40%" boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <CartItems />
+        </Box>
+      </section>
+    </Box>
   );
 }
 
