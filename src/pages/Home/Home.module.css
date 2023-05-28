@@ -1,0 +1,22 @@
+.Home > section {
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+
+  display: flex;
+  gap: 2rem;
+}
+
+.Home > section span {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000a8;
+}
+
+.description {
+  display: none;
+}
+
+/* .show {
+  display: block;
+} */
