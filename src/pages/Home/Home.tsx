@@ -8,8 +8,18 @@ import Header from "../../components/Header/Header";
 import Item from "../../components/Item/Item";
 
 const shoes = [
-  {},
-  {}
+  {
+    id: 1,
+    name: "Nike Shoe White",
+    price: 100,
+    imageSrc: "https://imgnike-a.akamaihd.net/1920x1920/02362651.jpg",
+  },
+  {
+    id: 2,
+    name: "Nike Shoe Black",
+    price: 250,
+    imageSrc: "https://static.dafiti.com.br/p/Nike-T%C3%AAnis-Nike-Air-Force-1-'07-Masculino-6736-31652411-1-zoom.jpg",
+  }
 ]
 
 const Home = () => {
@@ -23,24 +33,17 @@ const Home = () => {
     <main className={styles.Home}>
       <Header></Header>
       <section>
-        <Item
-          imageSrc="https://imgnike-a.akamaihd.net/1920x1920/02362651.jpg"
-          imageAlt="Shoe 1"
-          price={100}
-          description="Nike Shoe White"
-          isActive={descript === 0}
-          onshow={() => setDescript(0)}
+        {shoes.map(shoe => (
+          <Item 
+          imageSrc={shoe.imageSrc}
+          imageAlt={shoe.name}
+          price={shoe.price}
+          description={shoe.name}
+          isActive={descript === shoe.id}
+          onshow={() => setDescript(shoe.id)}
           unshow={() => setDescript(-1)}
-        />
-        <Item
-          imageSrc="https://static.dafiti.com.br/p/Nike-T%C3%AAnis-Nike-Air-Force-1-'07-Masculino-6736-31652411-1-zoom.jpg"
-          imageAlt="Shoe 2"
-          price={250}
-          description="Nike Shoe Black"
-          isActive={descript === 1}
-          onshow={() => setDescript(1)}
-          unshow={() => setDescript(-1)}
-        />
+          />
+        ))}
       </section>
     </main>
   );
