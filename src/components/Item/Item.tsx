@@ -15,15 +15,17 @@ interface ItemProps {
 const Item = ({ imageSrc, imageAlt, price, description, isActive, onshow, unshow }: ItemProps) => {
 
   return (
-    <Card maxW="250px" className={styles.Item} onMouseOver={onshow} onMouseOut={unshow}>
+    <Card className={styles.Item} onMouseOver={onshow} onMouseOut={unshow}>
           <CardBody>
-            <Image src={imageSrc} alt={imageAlt} borderRadius="lg"/>
+            <div className={styles.img_container}>
+              <Image src={imageSrc} alt={imageAlt} borderRadius="lg"/>
+            </div>
           </CardBody>
           <Divider />
           <CardFooter display="flex" flexDirection="column">
-            <Heading fontSize="1.5rem" fontWeight={500}>R${price} <span>x10 sem juros</span></Heading>
+            <Heading className={styles.price} fontSize="1.5rem" fontWeight={500}>R${price} <span>x10 sem juros</span></Heading>
             
-            {isActive && <p>{description}</p>}
+            {isActive && <p className={styles.Item_description}>{description}</p>}
           </CardFooter>
         </Card>
   )
