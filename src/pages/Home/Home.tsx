@@ -1,7 +1,7 @@
 import styles from "./Home.module.css";
 
 // Hooks
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // Components
 import Header from "../../components/Header/Header";
@@ -78,10 +78,6 @@ const shoes = [
 
 const Home = () => {
   const [descript, setDescript] = useState(-1);
-
-  useEffect(() => {
-    console.log(descript);
-  }, [descript]);
 
   return (
     <main className={styles.Home}>

@@ -51,3 +51,23 @@
   align-items: flex-start;
   gap: 5px;
 }
+
+.buy_item {
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: 1.6rem;
+  right: .5rem;
+  color: #FFF;
+  max-width: 30%;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  animation: show .3s ease-in-out forwards;
+}
+
+.buy_item img{
+  max-width: 1.8rem;
+}
+
+.buy_item:hover {
+  background-color: #3c84f0;
+}
