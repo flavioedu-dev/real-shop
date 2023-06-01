@@ -9,8 +9,7 @@
 }
 
 .img_container {
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
   margin: auto;
 }
 
@@ -27,6 +26,9 @@
 
   opacity: 0;
   animation: show .3s ease-in-out forwards;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 @keyframes show {
