@@ -11,3 +11,17 @@
   font-weight: 500;
   font-size: 1.2rem;
 }
+
+.cart_nav {
+  max-width: 3rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.cart_nav span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -65%);
+}
