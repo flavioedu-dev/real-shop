@@ -23,6 +23,9 @@
   padding: 0 1.2rem 1rem 1.2rem;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   opacity: 0;
   animation: show .3s ease-in-out forwards;
