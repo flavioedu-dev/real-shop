@@ -1,13 +1,23 @@
 import styles from "./Home.module.css";
 
 // Hooks
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 // Components
 import Header from "../../components/Header/Header";
 import Item from "../../components/Item/Item";
 
-const shoes = [
+// Context
+import { NumberCartItemsContext } from "../../contexts/NumberCartItems";
+
+interface ShoesProps {
+  id: number;
+  name: string;
+  price: number;
+  imageSrc: string;
+}
+
+const shoes: ShoesProps[] = [
   {
     id: 1,
     name: "Nike Shoe White",
@@ -79,6 +89,11 @@ const shoes = [
 const Home = () => {
   const [descript, setDescript] = useState(-1);
 
+  const numberCartItems = useContext(NumberCartItemsContext)
+  const addItemToCart = () => {
+    numberCartItems?.updateQuantity(numberCartItems.quantity + 1)
+  }
+
   return (
     <main className={styles.Home}>
       <Header></Header>
@@ -93,6 +108,7 @@ const Home = () => {
           isActive={descript === shoe.id}
           onshow={() => setDescript(shoe.id)}
           unshow={() => setDescript(-1)}
+          addCart={addItemToCart}
           />
         ))}
       </section>

@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 
+import { NumberCartItemsContextProvider } from "./contexts/NumberCartItems.tsx"
+
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -12,6 +14,7 @@ import Cart from "./pages/Cart/Cart.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
+    <NumberCartItemsContextProvider>
     <ChakraProvider>
       <BrowserRouter>
         <Box minH="100vh" className="body-container">
@@ -22,5 +25,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         </Box>
       </BrowserRouter>
     </ChakraProvider>
+    </NumberCartItemsContextProvider>
   </React.StrictMode>
 );

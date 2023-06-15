@@ -12,9 +12,10 @@ interface ItemProps {
   isActive: boolean;
   onshow: React.MouseEventHandler<HTMLDivElement>;
   unshow: React.MouseEventHandler<HTMLDivElement>;
+  addCart: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Item = ({ imageSrc, imageAlt, price, description, isActive, onshow, unshow }: ItemProps) => {
+const Item = ({ imageSrc, imageAlt, price, description, isActive, onshow, unshow, addCart }: ItemProps) => {
 
   return (
     <Card className={styles.Item} onMouseOver={onshow} onMouseOut={unshow}>
@@ -30,7 +31,7 @@ const Item = ({ imageSrc, imageAlt, price, description, isActive, onshow, unshow
             </Heading>
             
             {isActive && <p className={styles.Item_description}>{description}</p>}
-            {isActive && <button className={styles.buy_item}><img src={cart} alt="cart" /></button>}
+            {isActive && <button className={styles.buy_item} onClick={addCart}><img src={cart} alt="cart" /></button>}
           </CardFooter>
         </Card>
   )

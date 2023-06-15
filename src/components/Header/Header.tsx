@@ -3,11 +3,16 @@ import styles from "./Header.module.css"
 // Components
 import PrimaryInput from "../PrimaryInput/PrimaryInput"
 
-import cartItems from "../../assets/cart-items.png"
+import cartItems from "../../assets/shopping-cart.png"
 
-import { ChangeEvent, useState } from "react"
+import { ChangeEvent, useState, useContext } from "react"
+
+// Context
+import { NumberCartItemsContext } from "../../contexts/NumberCartItems"
 
 const Header = () => {
+
+  const numberCartItems = useContext(NumberCartItemsContext)
 
   const [searchItem, setSearchItem] = useState("")
 
@@ -23,7 +28,7 @@ const Header = () => {
       <PrimaryInput type="text" name="search-item" placeholder="Buscar produto..." onchange={handleSearch} value={searchItem} />
       <div className={styles.cart_nav}>
         <img src={cartItems} alt="cart-items" />
-        <span>{13}</span>
+        <span>{numberCartItems?.quantity}</span>
       </div>
     </header>
   )
